@@ -10,7 +10,7 @@ function ListaDeUsuarios() {
     useEffect(() => {
         const carregarUsuarios = async () => {
             try {
-                const response = await axios.get('http://localhost:8080/jogadores')
+                const response = await axios.get('https://saitama-backend.onrender.com/jogadores')
                 setUsuarios(response.data)
             } catch (error) {
                 alert('Erro ao buscar usuários: ', error)

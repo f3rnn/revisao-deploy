@@ -33,7 +33,7 @@ function FormularioCadastro() {
 
     const cadastrarUsuario = async () => {
         try {
-            const response = await axios.post('http://localhost:8080/jogadores', {nome, sexo, idade, altura, peso, posicao, numeroCamisa})
+            const response = await axios.post('https://saitama-backend.onrender.com/jogadores', {nome, sexo, idade, altura, peso, posicao, numeroCamisa})
             exibirMensagem(response.data.mensagem || 'Usuário cadastrado com sucesso!', 'sucesso')
             setNome('')
             setSexo('')
